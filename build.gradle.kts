@@ -27,7 +27,7 @@ tasks.withType<JavaCompile> {
 
 application {
     mainModule.set("org.example.demotaskjavafx")
-    mainClass.set("org.example.demotaskjavafx.HelloApplication")
+    mainClass.set("org.example.demotaskjavafx.DemoTaskApplication")
 }
 
 javafx {
