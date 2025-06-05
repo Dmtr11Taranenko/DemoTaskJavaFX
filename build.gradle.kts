@@ -45,9 +45,14 @@ tasks.withType<Test> {
 }
 
 jlink {
-    imageZip.set(layout.buildDirectory.file("/distributions/app-${javafx.platform.classifier}.zip"))
-    options.set(listOf("--strip-debug", "--compress", "2", "--no-header-files", "--no-man-pages"))
+    imageZip.set(layout.buildDirectory.file("distributions/app-${javafx.platform.classifier}.zip"))
     launcher {
-        name = "app"
+        name = "DemoTaskJavaFX"
+    }
+
+    jpackage {
+        installerType = "exe"
+        installerName = "DemoTaskJavaFX"
+        appVersion = "1.0"
     }
 }
